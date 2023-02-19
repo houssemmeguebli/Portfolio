@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Houssem Meguebli</title>
+    <link rel="stylesheet" href="index.html">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body_contact">
+ <div > 
+    <header>
+        <nav>
+            <ul class="nav_bare">
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="about_me.html">ABOUT ME</a></li>
+                <li><a href="latetest _project.html" target="_blank">LATETES PROJECTS</a></li>
+                <li> <a href="index.html">HOME</a></li>
+    
+    
+                <input type="search" placeholder="Search..." id="Search">
+    
+            </ul>
+       
+        </nav>
+        </header>
+        <br><br><br>
+    <SECtion>
+    <form  method="post" onsubmit="return verif()">
+        <div class="container">
+            <div class="cm"><h2>Contact Me</h2></div>
+                <div class="row">
+                    <div class="column">
+                         <label for="fname">Full Name</label>
+                         <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                         <label for="email">Email</label>
+                         <input type="text" id="email" name="email" placeholder="Your email.." >
+                         <label for="phone">Your number</label>
+                         <input type="tel" id="phone" name="phone" placeholder="+216 00 000 000" >
+                         <br><br>
+                         <label for="subject">Subject</label>
+                         <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                         <input type="submit" value="Submit" onclick="verif">
+                    </div>
+                </div>
+            
+        </div>
+    </form>
+            <script>                    //Controle de saisie ://
+                function verif() 
+                {
+                    if (document.getElementById("fname").value=="") {
+                        alert("Please type your name"); // controle de saisie :Si il ne taper pas un nom
+                        document.getElementById("fname").focus();
+                        return false;
+                     }
+                    if (document.getElementById("email").value=="") {
+                        alert("Please type a valid email"); // controle de saisie :Si il ne taper pas un email
+                        document.getElementById("email").focus();
+                        return false;
+                    }
+                    
+                    var a = document.getElementById("phone").value;
+                    
+                    if( a.length<8 ){
+                        alert("Type 8 numbers at least");// controle de saisie :Si il  taper moins que 8 chiffres
+                        document.getElementById("phone").focus();
+                        return false;
+                    }
+                    if (document.getElementById("subject").value=="") {
+                        alert("Please Type a message!"); // controle de saisie :Si il ne taper pas un subject
+                        document.getElementById("subject").focus();
+                        return false;
+                    }
+                    
+                 }
+                </script>
+                
+    </SECtion>
+<br><br><br><br><br>
+<br><br><br><br><br>
+    <footer>
+        <div class="footer">
+			<div><p class="footer__copyright no-margin">&copy; 2022 -Houssem</p></div>
+			<div><a href="contact.html" target="_blank">CONTACT ME</a></div>
+         
+    </footer>
+        
+</body>
+</html>
+contact.html
+Affichage de contact.html
